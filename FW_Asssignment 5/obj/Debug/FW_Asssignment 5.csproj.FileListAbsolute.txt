@@ -1,0 +1,8 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\bin\Debug\FW_Asssignment 5.exe.config
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\bin\Debug\FW_Asssignment 5.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\bin\Debug\FW_Asssignment 5.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\obj\Debug\FW_Asssignment 5.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\obj\Debug\FW_Asssignment 5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\obj\Debug\FW_Asssignment 5.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\obj\Debug\FW_Asssignment 5.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\FW_Asssignment 5\obj\Debug\FW_Asssignment 5.pdb

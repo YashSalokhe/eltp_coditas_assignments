@@ -1,0 +1,8 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\bin\Debug\Assignment_9FW.exe.config
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\bin\Debug\Assignment_9FW.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\bin\Debug\Assignment_9FW.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\obj\Debug\Assignment_9FW.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\obj\Debug\Assignment_9FW.csproj.SuggestedBindingRedirects.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\obj\Debug\Assignment_9FW.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\obj\Debug\Assignment_9FW.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_9FW\obj\Debug\Assignment_9FW.pdb

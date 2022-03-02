@@ -1,0 +1,8 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\bin\Debug\Assignment_10.exe.config
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\bin\Debug\Assignment_10.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\bin\Debug\Assignment_10.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\obj\Debug\Assignment_10.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\obj\Debug\Assignment_10.csproj.SuggestedBindingRedirects.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\obj\Debug\Assignment_10.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\obj\Debug\Assignment_10.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_10\obj\Debug\Assignment_10.pdb

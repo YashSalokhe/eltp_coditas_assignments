@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "591c255b-dc9d-43ad-a4a9-b715bd034b8b": {
+      "ProjectGuid": "591c255b-dc9d-43ad-a4a9-b715bd034b8b",
+      "DisplayName": "Assignment1",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "14603165-5b88-4416-8f6a-e02227f90a1e": {
+      "ProjectGuid": "14603165-5b88-4416-8f6a-e02227f90a1e",
+      "DisplayName": "Assignment2",
+      "ColorIndex": 1
+    },
+    "e913486f-317e-49a0-8322-c133da0d9075": {
+      "ProjectGuid": "e913486f-317e-49a0-8322-c133da0d9075",
+      "DisplayName": "Assignment 3",
+      "ColorIndex": 2
+    },
+    "1486da37-1f57-49d3-b5c5-87d0e1141cd8": {
+      "ProjectGuid": "1486da37-1f57-49d3-b5c5-87d0e1141cd8",
+      "DisplayName": "MiniProject1",
+      "ColorIndex": 3
+    },
+    "718442ce-67fb-4eda-b5f8-9c15078474bb": {
+      "ProjectGuid": "718442ce-67fb-4eda-b5f8-9c15078474bb",
+      "DisplayName": "Assignment_4",
+      "ColorIndex": 4
+    },
+    "31b9d2c9-c9f6-4070-a70d-fcb682324df2": {
+      "ProjectGuid": "31b9d2c9-c9f6-4070-a70d-fcb682324df2",
+      "DisplayName": "FW_Asssignment 5",
+      "ColorIndex": 5
+    },
+    "18984227-b434-4030-b6d0-2077ba791789": {
+      "ProjectGuid": "18984227-b434-4030-b6d0-2077ba791789",
+      "DisplayName": "Assignment_5",
+      "ColorIndex": 6
+    },
+    "fb8d9365-b828-4354-b3f8-b2d48d453368": {
+      "ProjectGuid": "fb8d9365-b828-4354-b3f8-b2d48d453368",
+      "DisplayName": "Assignment_6",
+      "ColorIndex": 7
+    },
+    "ed8a4d83-27fe-441b-be68-36a0234d206c": {
+      "ProjectGuid": "ed8a4d83-27fe-441b-be68-36a0234d206c",
+      "DisplayName": "Assignment_7",
+      "ColorIndex": 8
+    },
+    "8c0fce92-b42b-4833-a8fe-3600adac563e": {
+      "ProjectGuid": "8c0fce92-b42b-4833-a8fe-3600adac563e",
+      "DisplayName": "Assignment_8Feb-18",
+      "ColorIndex": 9
+    },
+    "3ae080f6-7d72-4a9d-96e2-26e7ba0ad204": {
+      "ProjectGuid": "3ae080f6-7d72-4a9d-96e2-26e7ba0ad204",
+      "DisplayName": "Assignment_8",
+      "ColorIndex": 10
+    },
+    "b3e5c8c5-d4ec-46b0-80fc-09b629768d21": {
+      "ProjectGuid": "b3e5c8c5-d4ec-46b0-80fc-09b629768d21",
+      "DisplayName": "Assignment_9FW",
+      "ColorIndex": 11
+    },
+    "0496e6c3-2db4-4bbf-8235-cd5e9a29eea5": {
+      "ProjectGuid": "0496e6c3-2db4-4bbf-8235-cd5e9a29eea5",
+      "DisplayName": "Assignment_10",
+      "ColorIndex": 12
+    }
+  },
+  "NextColorIndex": 13
+}

@@ -1,0 +1,8 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\bin\Debug\Assinment_8.exe.config
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\bin\Debug\Assinment_8.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\bin\Debug\Assinment_8.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\obj\Debug\Assignment_8.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\obj\Debug\Assignment_8.csproj.SuggestedBindingRedirects.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\obj\Debug\Assignment_8.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\obj\Debug\Assinment_8.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assinment_8\obj\Debug\Assinment_8.pdb

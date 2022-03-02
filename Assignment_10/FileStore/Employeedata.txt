@@ -1,0 +1,6 @@
+101	 Yash	  100000	 Lead	 10	yash@gmail.com
+
+102	 Mayur	  200000	 Manager	 10	mayur@gmail.com
+126	 ganes	  354623	 Intern	 20	gana@gmail.com
+128	 Ashish	  241326	 Clerk	 30	ashish@gmail.com
+4	 kiran	  354232	 Intern	 10	kiran@gmail.com

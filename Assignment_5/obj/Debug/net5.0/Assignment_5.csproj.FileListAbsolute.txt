@@ -1,0 +1,16 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.deps.json
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.runtimeconfig.json
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.runtimeconfig.dev.json
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\ref\Assignment_5.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\bin\Debug\net5.0\Assignment_5.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.AssemblyInfoInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.AssemblyInfo.cs
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\ref\Assignment_5.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.genruntimeconfig.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_5\obj\Debug\net5.0\Assignment_5.csproj.AssemblyReference.cache
