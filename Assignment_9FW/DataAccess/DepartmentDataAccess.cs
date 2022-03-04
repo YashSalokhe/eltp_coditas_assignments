@@ -12,16 +12,21 @@ namespace Assignment_9FW.DataAccess
     internal class DepartmentDataAccess : IDataAccess<Department>
     {
         SqlConnection Conn;
+        SqlDataAdapter AdDept;
+        DataSet Ds;
         public DepartmentDataAccess()
         {
             Conn = new SqlConnection("Data Source= YSALOKHE-LAP-05\\MSSQLSERVER01 ;Initial Catalog=Enterprise;Integrated Security=SSPI");
-            SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
+            AdDept = new SqlDataAdapter("Select * from Department", Conn);
+            
+            Ds = new DataSet();
+            //AdDept.Fill(Ds, "Department");
         }
 
         void IDataAccess<Department>.Delete()
         {
-            SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
-            DataSet Ds = new DataSet();
+           // SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
+           // DataSet Ds = new DataSet();
             AdDept.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             AdDept.Fill(Ds, "Department");
 
@@ -36,8 +41,8 @@ namespace Assignment_9FW.DataAccess
 
         void IDataAccess<Department>.Insert()
         {
-            SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
-            DataSet Ds = new DataSet();
+           // SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
+           // DataSet Ds = new DataSet();
 
             AdDept.Fill(Ds, "Department");
             DataRow DrNew = Ds.Tables["Department"].NewRow();
@@ -66,10 +71,10 @@ namespace Assignment_9FW.DataAccess
 
         void IDataAccess<Department>.Read()
         {
-            SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
-            DataSet Ds = new DataSet();
+            //SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
+            //DataSet Ds = new DataSet();
             //AdDept.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            AdDept.Fill(Ds, "Department");
+           AdDept.Fill(Ds, "Department");
             DataRowCollection dataRows = Ds.Tables["Department"].Rows;
 
             foreach (DataRow row in dataRows)
@@ -80,8 +85,8 @@ namespace Assignment_9FW.DataAccess
 
         void IDataAccess<Department>.Update()
         {
-            SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
-            DataSet Ds = new DataSet();
+           // SqlDataAdapter AdDept = new SqlDataAdapter("Select * from Department", Conn);
+            //DataSet Ds = new DataSet();
             AdDept.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             AdDept.Fill(Ds, "Department");
             Console.WriteLine("Enter Department number want to update");

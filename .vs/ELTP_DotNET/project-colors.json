@@ -70,7 +70,17 @@
       "ProjectGuid": "0496e6c3-2db4-4bbf-8235-cd5e9a29eea5",
       "DisplayName": "Assignment_10",
       "ColorIndex": 12
+    },
+    "99574206-a806-456f-aca3-90b5ac5b9628": {
+      "ProjectGuid": "99574206-a806-456f-aca3-90b5ac5b9628",
+      "DisplayName": "Assignment10",
+      "ColorIndex": 13
+    },
+    "404a8ac3-2cb1-4d94-a854-7843424647f8": {
+      "ProjectGuid": "404a8ac3-2cb1-4d94-a854-7843424647f8",
+      "DisplayName": "Assignment 11",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 15
 }

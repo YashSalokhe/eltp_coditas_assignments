@@ -12,24 +12,25 @@ namespace Assignment_9FW.DataAccess
     public class EmployeeDataAccess : IDataAccess<Employee> 
     {
         SqlConnection Conn;
-        SqlDataAdapter AdEmp = null;
-        DataSet Ds = null;
+        SqlDataAdapter AdEmp ;
+        DataSet Ds;
+        
         public EmployeeDataAccess()
         {
             Conn = new SqlConnection("Data Source= YSALOKHE-LAP-05\\MSSQLSERVER01 ;Initial Catalog=Enterprise;Integrated Security=SSPI");
-            SqlDataAdapter AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
-             DataSet Ds = new DataSet();
-            AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            AdEmp.Fill(Ds, "Employee");
+           AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
+             Ds = new DataSet();
+           // AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+           // AdEmp.Fill(Ds, "Employee");
         }
 
         void IDataAccess<Employee>.Delete()
         {
-           // SqlDataAdapter AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
-           // DataSet Ds = new DataSet();
-           // AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-           // AdEmp.Fill(Ds, "Employee");
-
+            // SqlDataAdapter AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
+            // DataSet Ds = new DataSet();
+            AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+             AdEmp.Fill(Ds, "Employee");
+            
             Console.WriteLine("Enter empno to delete");
             int no = int.Parse(Console.ReadLine());
 
@@ -81,9 +82,9 @@ namespace Assignment_9FW.DataAccess
         void IDataAccess<Employee>.Read()
         {
            //SqlDataAdapter AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
-           // DataSet Ds = new DataSet();
-           // AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-           // AdEmp.Fill(Ds, "Employee");
+            //DataSet Ds = new DataSet();
+            AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            AdEmp.Fill(Ds, "Employee");
             DataRowCollection dataRows = Ds.Tables["Employee"].Rows;
 
             foreach (DataRow row in dataRows)
@@ -96,9 +97,9 @@ namespace Assignment_9FW.DataAccess
         void IDataAccess<Employee>.Update()
         {
             //SqlDataAdapter AdEmp = new SqlDataAdapter("Select * from Employee", Conn);
-            //DataSet Ds = new DataSet();
-            //AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            //AdEmp.Fill(Ds, "Employee");
+           // DataSet Ds = new DataSet();
+            AdEmp.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            AdEmp.Fill(Ds, "Employee");
 
             Console.WriteLine("Enter empno ypu want to update");
             int no = int.Parse(Console.ReadLine());

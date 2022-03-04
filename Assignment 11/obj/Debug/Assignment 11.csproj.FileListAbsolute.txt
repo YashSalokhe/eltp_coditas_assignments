@@ -1,0 +1,8 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\bin\Debug\Assignment 11.exe.config
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\bin\Debug\Assignment 11.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\bin\Debug\Assignment 11.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\obj\Debug\Assignment 11.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\obj\Debug\Assignment 11.csproj.SuggestedBindingRedirects.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\obj\Debug\Assignment 11.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\obj\Debug\Assignment 11.exe
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment 11\obj\Debug\Assignment 11.pdb

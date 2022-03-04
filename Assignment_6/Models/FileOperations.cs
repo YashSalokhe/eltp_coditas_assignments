@@ -11,10 +11,10 @@ namespace Assignment_6.Models
 {
     internal class FileOperations
     {
-        public void fileCreate(Employee emp,double HRA , double TA ,double DA,double gross , double tax , int netSalary)
+        public void fileCreate(Employee emp,items item)
         {
             DateTime date = DateTime.Now;
-            string path = @"C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_6\SalarySlip";
+            string path = @"C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment_6\SalarySlipSerialize";
             string filePath = $"{path}\\Salary-for-{date.ToString("Y")}-{emp.EmpNo}.txt";
             if (File.Exists(filePath))
             {
@@ -25,16 +25,17 @@ namespace Assignment_6.Models
             {
                 //Create a File
 
-                writeData(filePath, emp, HRA, TA, DA, gross, tax, netSalary);
+                writeData(filePath, emp,item);
+               
             }
         }
 
     
 
-        public void writeData(string filePath,Employee emp, double HRA, double TA,double DA, double gross, double tax, int netSalary)
+        public void writeData(string filePath,Employee emp,items item)
         {
 
-            string NetSalaryWords = ConvertWholeNumber(netSalary.ToString());
+            string NetSalaryWords = ConvertWholeNumber(item.netSalary.ToString());
             FileStream fs = File.Create(filePath);
             BinaryFormatter formatter = new BinaryFormatter();
             byte[] content = new UTF8Encoding(true).GetBytes(
@@ -45,15 +46,15 @@ namespace Assignment_6.Models
                            $"|Income (Rs.)                  | Deduction (Rs.)             |\n" +
                            $"|------------------------------------------------------------|\n" +
                            $"|Basic Salary: {emp.Salary}    |                             |\n" +
-                           $"|HRA: {HRA}                    |                             |\n" +
-                           $"|TA: {TA}                      |                             |\n" +
-                           $"|DA: {DA}                      |                             |\n" +
+                           $"|HRA: {item.HRA}                    |                             |\n" +
+                           $"|TA: {item.TS}                      |                             |\n" +
+                           $"|DA: {item.DA}                      |                             |\n" +
                            $"|------------------------------------------------------------|\n" +
-                           $"|Gross: {gross}                |                             |\n" +
+                           $"|Gross: {item.gross}                |                             |\n" +
                            $"|------------------------------------------------------------|\n" +
-                           $"|                              | Tax: {tax}                  |\n" +
+                           $"|                              | Tax: {item.tax}                  |\n" +
                             $"|------------------------------------------------------------|\n" +
-                           $"|NetSalary: {netSalary}        |                             |\n" +
+                           $"|NetSalary: {item.netSalary}        |                             |\n" +
                            $"|------------------------------------------------------------|\n" +
                            $"|NetSalary in Words:{NetSalaryWords} only                    |\n" +
                            $"--------------------------------------------------------------");
@@ -65,7 +66,7 @@ namespace Assignment_6.Models
 
 
         }
-
+       
         public String ConvertWholeNumber(string Number)
         {
             string word = "";

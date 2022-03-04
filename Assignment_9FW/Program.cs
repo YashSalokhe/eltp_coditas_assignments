@@ -42,6 +42,7 @@ namespace Assignment_9FW
                     case 3:
 
                         dataEmp.Read();
+                        dataEmp.Update();
                         break ;
 
                     case 4:

@@ -28,7 +28,7 @@ namespace Assignment_3
             return (x + y + z) * mult;
         }
 
-     //   public abstract void Display();
+        //public abstract void Display();
 
         public virtual void Display()
         {
