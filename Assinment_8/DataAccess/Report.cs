@@ -165,11 +165,15 @@ namespace Assinment_8.DataAccess
                 //    Console.WriteLine($"\t{Emp.EmpName} is from department {Emp.DeptName}");
 
                 //}
-                var deptSal = empDept.GroupBy(e => e.DeptName);
+                var deptSal = empDept.OrderByDescending(e => e.Salary).GroupBy(e => e.DeptName).Select(e => e.Take(1));
                 foreach (var dept in deptSal)
                 {
-                    var maxSal = dept.Max(e => e.Salary);
-                    Console.WriteLine($"The maximum salary of {dept.Key} is {maxSal} ");
+                   
+                    //var maxSal = dept.Max(e => e.Salary);
+                    //Console.WriteLine($"The maximum salary of {dept.Key} is {maxSal} ");
+                    foreach (var emp in empDept) {
+                        Console.WriteLine($"Max salary is of {emp.EmpNo} {emp.EmpName} with salary {emp.Salary}"); 
+                    }
                 }
             }
             catch (SqlException ex)

@@ -80,7 +80,12 @@
       "ProjectGuid": "404a8ac3-2cb1-4d94-a854-7843424647f8",
       "DisplayName": "Assignment 11",
       "ColorIndex": 14
+    },
+    "170b2959-d3d9-4408-95dc-a961f47d74fb": {
+      "ProjectGuid": "170b2959-d3d9-4408-95dc-a961f47d74fb",
+      "DisplayName": "Assignment_12",
+      "ColorIndex": 15
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 0
 }

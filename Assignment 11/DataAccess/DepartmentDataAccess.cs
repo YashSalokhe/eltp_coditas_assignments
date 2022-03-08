@@ -9,7 +9,7 @@ using Assignment_11.Models;
 
 namespace Assignment_11.DataAccess
 {
-    internal class DepartmentDataAccess
+    internal class DepartmentDataAccess : IDataAccess<Department,int>
     {
         SqlConnection Conn;
         SqlCommand Cmd;

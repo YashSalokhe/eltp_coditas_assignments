@@ -12,8 +12,8 @@ namespace Assignment_11
     {
         static void Main(string[] args)
         {
-            EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
-            DepartmentDataAccess departmentDataAccess = new DepartmentDataAccess();
+            IDataAccess<Employee,int> employeeDataAccess = new EmployeeDataAccess();
+            IDataAccess<Department, int> departmentDataAccess = new DepartmentDataAccess();
             bool condition = false;
             //Console.ReadLine();
             do {

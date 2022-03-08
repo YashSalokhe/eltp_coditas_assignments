@@ -9,7 +9,7 @@ using Assignment_11.Models;
 
 namespace Assignment_11.DataAccess
 {
-    internal class EmployeeDataAccess
+    internal class EmployeeDataAccess : IDataAccess<Employee,int>
     {
         SqlConnection Conn;
         SqlCommand Cmd;
@@ -17,7 +17,8 @@ namespace Assignment_11.DataAccess
         {
             Conn = new SqlConnection("Data Source= YSALOKHE-LAP-05\\MSSQLSERVER01 ;Initial Catalog=Enterprise;Integrated Security=SSPI");
         }
-         public async Task<IEnumerable<Employee>> GetEmpDataAsync()
+
+       async Task<IEnumerable<Employee>> IDataAccess<Employee, int>.GetEmpDataAsync()
         {
             try
             {
@@ -50,12 +51,11 @@ namespace Assignment_11.DataAccess
                 Console.WriteLine($"Error occured {ex.Message}");
                 return null;
             }
-            
+
         }
 
-        public async Task Create(Employee entity)
+       async Task IDataAccess<Employee, int>.Create(Employee entity)
         {
-            
             try
             {
                 Conn.Open();
@@ -83,10 +83,51 @@ namespace Assignment_11.DataAccess
                     Conn.Close();
                 }
             }
-          //  return employee;
         }
 
-        public async Task Update(Employee entity , int id)
+       async Task<int> IDataAccess<Employee, int>.Delete(int id)
+        {
+            Employee employee = new Employee();
+            try
+            {
+                Conn.Open();
+                Cmd = new SqlCommand();
+                Cmd.Connection = Conn;
+                Cmd.CommandText = "Delete From Employee where EmpNo=@EmpNo";
+                SqlParameter pEmpNo = new SqlParameter();
+                pEmpNo.ParameterName = "@EmpNo";
+                pEmpNo.SqlDbType = SqlDbType.Int;
+                pEmpNo.Direction = ParameterDirection.Input;
+                pEmpNo.Value = id;
+                Cmd.Parameters.Add(pEmpNo);
+                int res = await Cmd.ExecuteNonQueryAsync();
+
+                Conn.Close();
+                return res;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+                return 0;
+                throw ex;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+                return 0;
+                throw ex;
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                {
+                    Conn.Close();
+                }
+            }
+        }
+
+       async Task IDataAccess<Employee, int>.Update(Employee entity, int id)
         {
             Employee employee = new Employee();
             try
@@ -160,48 +201,6 @@ namespace Assignment_11.DataAccess
             }
             catch (Exception ex)
             {
-                throw ex;
-            }
-            finally
-            {
-                if (Conn.State == ConnectionState.Open)
-                {
-                    Conn.Close();
-                }
-            }
-         
-        }
-        
-        public async Task<int> Delete(int id)
-        {
-            Employee employee = new Employee();
-            try
-            {
-                Conn.Open();
-                Cmd = new SqlCommand();
-                Cmd.Connection = Conn;
-                Cmd.CommandText = "Delete From Employee where EmpNo=@EmpNo";
-                SqlParameter pEmpNo = new SqlParameter();
-                pEmpNo.ParameterName = "@EmpNo";
-                pEmpNo.SqlDbType = SqlDbType.Int;
-                pEmpNo.Direction = ParameterDirection.Input;
-                pEmpNo.Value = id;
-                Cmd.Parameters.Add(pEmpNo);
-                int res =await Cmd.ExecuteNonQueryAsync();
-                
-                Conn.Close();
-                return res;
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine($"{ex.Message}");
-                return 0;
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"{ex.Message}");
-                return 0;
                 throw ex;
             }
             finally
