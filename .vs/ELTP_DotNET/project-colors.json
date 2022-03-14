@@ -85,7 +85,62 @@
       "ProjectGuid": "170b2959-d3d9-4408-95dc-a961f47d74fb",
       "DisplayName": "Assignment_12",
       "ColorIndex": 15
+    },
+    "0eb390e8-432f-4b34-b40d-73c9adcc8de1": {
+      "ProjectGuid": "0eb390e8-432f-4b34-b40d-73c9adcc8de1",
+      "DisplayName": "Assignment_13",
+      "ColorIndex": 0
+    },
+    "283a4f54-05dd-49b8-a44d-24083d00f9df": {
+      "ProjectGuid": "283a4f54-05dd-49b8-a44d-24083d00f9df",
+      "DisplayName": "Assignment14_Part1",
+      "ColorIndex": 1
+    },
+    "23262957-e8a1-4cb3-81a0-d64b6de0d295": {
+      "ProjectGuid": "23262957-e8a1-4cb3-81a0-d64b6de0d295",
+      "DisplayName": "Assignment14_part1",
+      "ColorIndex": 2
+    },
+    "59a1f2d4-4e16-4526-8ab6-97edf8cf1921": {
+      "ProjectGuid": "59a1f2d4-4e16-4526-8ab6-97edf8cf1921",
+      "DisplayName": "Assignment14_Part1",
+      "ColorIndex": 3
+    },
+    "e9f40d8c-6585-48bb-a79d-8a603b89289e": {
+      "ProjectGuid": "e9f40d8c-6585-48bb-a79d-8a603b89289e",
+      "DisplayName": "Assignment14_Part2",
+      "ColorIndex": 4
+    },
+    "3b5c7f73-651d-4c08-924d-2e533179c6d0": {
+      "ProjectGuid": "3b5c7f73-651d-4c08-924d-2e533179c6d0",
+      "DisplayName": "Assignment_15",
+      "ColorIndex": 5
+    },
+    "76d0ee47-64b5-4749-9c1a-6de4af24ef83": {
+      "ProjectGuid": "76d0ee47-64b5-4749-9c1a-6de4af24ef83",
+      "DisplayName": "ClinicManagement",
+      "ColorIndex": 6
+    },
+    "efc3114c-9758-4952-b9b2-951deec58058": {
+      "ProjectGuid": "efc3114c-9758-4952-b9b2-951deec58058",
+      "DisplayName": "ClinicManagementApp",
+      "ColorIndex": 7
+    },
+    "8daae2ed-d0f9-498f-a174-a5ee78db2673": {
+      "ProjectGuid": "8daae2ed-d0f9-498f-a174-a5ee78db2673",
+      "DisplayName": "ClinicManagementUpdated",
+      "ColorIndex": 8
+    },
+    "d37b0a83-2099-4456-bddc-1bdc181880c8": {
+      "ProjectGuid": "d37b0a83-2099-4456-bddc-1bdc181880c8",
+      "DisplayName": "ClinicManagement",
+      "ColorIndex": 9
+    },
+    "81b12bbf-0bc9-4576-bc15-38fcde38417d": {
+      "ProjectGuid": "81b12bbf-0bc9-4576-bc15-38fcde38417d",
+      "DisplayName": "Restaurant_Billing_System",
+      "ColorIndex": 10
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 11
 }
