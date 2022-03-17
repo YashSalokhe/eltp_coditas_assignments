@@ -1,0 +1,14 @@
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\bin\Release\net6.0\Assignment14_Part1.deps.json
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\bin\Release\net6.0\Assignment14_Part1.runtimeconfig.json
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\bin\Release\net6.0\Assignment14_Part1.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\bin\Release\net6.0\ref\Assignment14_Part1.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\bin\Release\net6.0\Assignment14_Part1.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.csproj.AssemblyReference.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.AssemblyInfoInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.AssemblyInfo.cs
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.csproj.CoreCompileInputs.cache
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\ref\Assignment14_Part1.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.pdb
+C:\Users\Coditas\source\repos\ELTP_DotNET\Assignment14_Part1\obj\Release\net6.0\Assignment14_Part1.genruntimeconfig.cache
