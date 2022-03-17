@@ -140,7 +140,17 @@
       "ProjectGuid": "81b12bbf-0bc9-4576-bc15-38fcde38417d",
       "DisplayName": "Restaurant_Billing_System",
       "ColorIndex": 10
+    },
+    "9980f1bc-f92b-44e2-941d-79c3e2153729": {
+      "ProjectGuid": "9980f1bc-f92b-44e2-941d-79c3e2153729",
+      "DisplayName": "Assignment_16(16-March)",
+      "ColorIndex": 11
+    },
+    "4bb3aeb3-31a7-42ad-810d-683974eef0ed": {
+      "ProjectGuid": "4bb3aeb3-31a7-42ad-810d-683974eef0ed",
+      "DisplayName": "16_March",
+      "ColorIndex": 12
     }
   },
-  "NextColorIndex": 11
+  "NextColorIndex": 13
 }
