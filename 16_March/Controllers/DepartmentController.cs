@@ -29,8 +29,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Create(Department department)
         {
-            var res = deptService.CreateAsync(department).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = deptService.CreateAsync(department).Result;
+                return RedirectToAction("Index"); 
+            }
+            else
+            {
+                return View(department);
+            }
         }
         /// <summary>
         /// the http get edit request must pass the route paramenter as 
@@ -47,8 +54,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Edit(int id, Department department)
         {
-            var res = deptService.UpdateAsync(id, department).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = deptService.UpdateAsync(id, department).Result;
+                return RedirectToAction("Index"); 
+            }
+            else
+            {
+                return RedirectToAction("Department");
+            }
         }
         /// <summary>
         /// Http Get reequest will accept an id of record to deltete and return a view that will 
@@ -58,15 +72,16 @@ namespace _16_March.Controllers
         /// <returns></returns>
         public IActionResult Delete(int id)
         {
-            var res = deptService.GetAsync(id).Result;
-            return View(res);
-        }
-
-        [HttpPost]
-        public IActionResult Delete(int id, Department department)
-        {
-            var res = deptService.DeleteAsync(id).Result;
+           // var res = deptService.GetAsync(id).Result;
+            var resdel = deptService.DeleteAsync(id).Result;
             return RedirectToAction("Index");
         }
+
+        //[HttpPost]
+        //public IActionResult Delete(int id, Department department)
+        //{
+        //    var res = deptService.DeleteAsync(id).Result;
+        //    return RedirectToAction("Index");
+        //}
     }
 }

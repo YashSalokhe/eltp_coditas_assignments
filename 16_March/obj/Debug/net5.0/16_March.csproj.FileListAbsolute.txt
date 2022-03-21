@@ -66,7 +66,6 @@ C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\16_March.dll
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\16_March.pdb
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\16_March.genruntimeconfig.cache
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\ref\16_March.dll
-C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\bin\Debug\net5.0\ref\16_March.dll
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
@@ -153,3 +152,5 @@ C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\Razor\Views\
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\Razor\Views\User\Create.cshtml.g.cs
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\Razor\Views\User\Edit.cshtml.g.cs
 C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\Razor\Views\User\Delete.cshtml.g.cs
+C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\bin\Debug\net5.0\ref\16_March.dll
+C:\Users\Coditas\source\repos\ELTP_DotNET\16_March\obj\Debug\net5.0\Razor\Views\Employee\Details.cshtml.g.cs

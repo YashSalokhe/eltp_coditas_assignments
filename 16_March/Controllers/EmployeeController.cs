@@ -27,8 +27,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Create(Employee employee)
         {
-            var res = empService.CreateAsync(employee).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = empService.CreateAsync(employee).Result;
+                return RedirectToAction("Index"); 
+            }
+            else
+            {
+                return RedirectToAction("Employee");
+            }
         }
         /// <summary>
         /// the http get edit request must pass the route paramenter as 
@@ -45,8 +52,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Edit(int id, Employee employee)
         {
-            var res = empService.UpdateAsync(id, employee).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = empService.UpdateAsync(id, employee).Result;
+                return RedirectToAction("Index"); 
+            }
+            else
+            {
+                return RedirectToAction("Employee");
+            }
         }
         /// <summary>
         /// Http Get reequest will accept an id of record to deltete and return a view that will 
@@ -65,6 +79,13 @@ namespace _16_March.Controllers
         {
             var res = empService.DeleteAsync(id).Result;
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int id)
+        {
+            var res = empService.GetAsync(id).Result;
+          
+            return View(res);
         }
     }
 }

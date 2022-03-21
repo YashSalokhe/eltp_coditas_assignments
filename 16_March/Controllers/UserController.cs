@@ -27,8 +27,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Create(UserInfo user)
         {
-            var res = userService.CreateAsync(user).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = userService.CreateAsync(user).Result;
+                return RedirectToAction("Index"); 
+            }
+            else
+            {
+                return RedirectToAction("User");
+            }
         }
         /// <summary>
         /// the http get edit request must pass the route paramenter as 
@@ -45,8 +52,15 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Edit(int id, UserInfo user)
         {
-            var res = userService.UpdateAsync(id, user).Result;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = userService.UpdateAsync(id, user).Result;
+                return RedirectToAction("Index"); 
+            }
+             else
+            {
+                return RedirectToAction("Index");
+            }
         }
         /// <summary>
         /// Http Get reequest will accept an id of record to deltete and return a view that will 

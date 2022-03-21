@@ -65,8 +65,11 @@ namespace _16_March
 
             app.UseEndpoints(endpoints =>
             {
+                //Map with MVC controller
                 endpoints.MapControllerRoute(
                     name: "default",
+                    // Route URL expression
+                    //          HomeController      The Index action method id is optional
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }

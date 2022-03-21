@@ -37,7 +37,14 @@ namespace _16_March.Services
 
        async Task<IEnumerable<Employee>> IService<Employee, int>.GetAsync()
         {
-            return await ctx.Employees.ToListAsync();
+
+           var result =  await ctx.Employees.ToListAsync();
+            foreach(var emp in result)
+            {
+                emp.Tax = emp.Salary * 0.10;
+            }
+            await ctx.SaveChangesAsync();
+            return result;
         }
 
       async  Task<Employee> IService<Employee, int>.GetAsync(int id)
