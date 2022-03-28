@@ -150,7 +150,17 @@
       "ProjectGuid": "4bb3aeb3-31a7-42ad-810d-683974eef0ed",
       "DisplayName": "16_March",
       "ColorIndex": 12
+    },
+    "36e1ed55-1657-4022-8660-307665fa0565": {
+      "ProjectGuid": "36e1ed55-1657-4022-8660-307665fa0565",
+      "DisplayName": "Shopping_Cart",
+      "ColorIndex": 13
+    },
+    "69c21fcc-2598-49fa-b57f-da85e914c591": {
+      "ProjectGuid": "69c21fcc-2598-49fa-b57f-da85e914c591",
+      "DisplayName": "Practice_1",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 15
 }

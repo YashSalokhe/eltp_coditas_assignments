@@ -20,6 +20,8 @@ namespace _16_March.Models
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<LogExecution> LogExecutions { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<UserInfo> UserInfos { get; set; }
 
@@ -92,6 +94,56 @@ namespace _16_March.Models
                     .HasForeignKey(d => d.DeptNo)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Employee__DeptNo__4BAC3F29");
+            });
+
+            modelBuilder.Entity<Log>(entity =>
+            {
+                entity.HasKey(e => e.RequestId)
+                    .HasName("PK__Logs__33A8517ADA860963");
+
+                entity.Property(e => e.ActionName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ControllerName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ExecutionCompletionTime)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.RequestDateTime).HasColumnType("datetime");
+            });
+
+            modelBuilder.Entity<LogExecution>(entity =>
+            {
+                entity.HasKey(e => e.RequestId)
+                    .HasName("PK__LogExecu__33A8517A9B7D8D87");
+
+                entity.ToTable("LogExecution");
+
+                entity.Property(e => e.ActionName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ControllerName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ExceptionMessage)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ExceptionType)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ExecutionCompletionTime)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.RequestDateTime).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Student>(entity =>

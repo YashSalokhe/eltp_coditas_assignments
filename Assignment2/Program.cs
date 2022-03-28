@@ -234,6 +234,7 @@ namespace Assignment2
         static void ReverseWord(string content)
         {
             string[] words = content.Split();
+            int count = words.Length;
             ArrayList str  = new ArrayList();
             foreach (string word in words)
             {

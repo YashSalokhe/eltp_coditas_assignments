@@ -1,6 +1,7 @@
 ﻿using _16_March.Models;
 using _16_March.Services;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace _16_March.Controllers
 {
@@ -29,23 +30,55 @@ namespace _16_March.Controllers
         [HttpPost]
         public IActionResult Create(Department department)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var res = deptService.CreateAsync(department).Result;
-                return RedirectToAction("Index"); 
+                // USe if-else statements for Explict Model Validations
+                var dept = deptService.GetAsync(department.DeptNo).Result;
+                if (dept != null)
+                {
+                    throw new Exception($"Department No {department.DeptNo} is already present");
+                }
+
+                // if no error then Process values
+                if (ModelState.IsValid)
+                {
+                    var res = deptService.CreateAsync(department).Result;
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewData["Message"] = "Kay Yaar again Wrong Data!!!!";
+                    ViewBag.NewMessage = "Ram Bhala Kare";
+                    //Stay on the same page
+                    return View(department);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return View(department);
+                // Return the Error Page
+                //return View("Error", new ErrorViewModel() 
+                //{
+                //   ControllerName = "Department",
+                //   ActionName = "Create",
+                //   ErrorMessage = ex.Message
+                //});
+
+                return View("Error", new ErrorViewModel()
+                {
+                    ControllerName = RouteData.Values["controller"].ToString(),
+                    ActionName = RouteData.Values["action"].ToString(),
+                    ErrorMessage = ex.Message
+                });
+
             }
         }
-        /// <summary>
-        /// the http get edit request must pass the route paramenter as 
-        /// 'id' (Refer: app.UseEndpoint)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public IActionResult Edit(int id)
+            /// <summary>
+            /// the http get edit request must pass the route paramenter as 
+            /// 'id' (Refer: app.UseEndpoint)
+            /// </summary>
+            /// <param name="id"></param>
+            /// <returns></returns>
+            public IActionResult Edit(int id)
         {
             var res = deptService.GetAsync(id).Result;
             return View(res);

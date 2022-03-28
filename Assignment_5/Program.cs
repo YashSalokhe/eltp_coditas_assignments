@@ -12,7 +12,7 @@ namespace Assignment_5
     {
         static void Main(string[] args)
         {
-            
+            taskException t = new taskException();
             Employees emps = new Employees();
             Departments dep = new Departments();
             EmpDepts empdept = new EmpDepts();
@@ -58,7 +58,8 @@ namespace Assignment_5
 
                     case 5:
 
-                        Q5(emps);
+                        var temp =t.Q5(emps);
+                        Console.WriteLine(temp.Exception);
                         break;
 
                     case 6:
@@ -164,16 +165,7 @@ namespace Assignment_5
             }
         }
 
-        static void Q5(IEnumerable<Employee> emps)
-        {
-            var deptSal = emps.GroupBy(e => e.DeptName);
-            var ans = emps.OrderBy(e => e.Salary).GroupBy(e => e.DeptName).Select(e => e.Take(1));
-            foreach (var dept in ans)
-            {
-                PrintResult(dept);
-            }
-        }
-
+       
         static void Q6(IEnumerable<Employee> emps)
         {
             var deptSal = emps.GroupBy(e => e.DeptName);

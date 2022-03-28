@@ -13,13 +13,21 @@ namespace Assignment_6
 
         static void Main(string[] args)
         {
-            Employees emp = new Employees();
-            FileOperations fileOperations = new FileOperations();
-            //  calculateTax(emp);
-             Task.Factory.StartNew(() => calculateTax(emp))
-                .ContinueWith(delegate { moveFile(); });
-            Console.ReadLine();
-            
+            try
+            {
+                Employees emp = new Employees();
+                FileOperations fileOperations = new FileOperations();
+                //  calculateTax(emp);
+                Task.Factory.StartNew(() => calculateTax(emp))
+                   .ContinueWith(delegate { moveFile(); });
+                Console.ReadLine();
+
+            }
+            catch (Exception ex)
+            {
+
+                Task.FromException(ex);
+            }
         }
 
         static void calculateTax(IEnumerable<Employee> emps)

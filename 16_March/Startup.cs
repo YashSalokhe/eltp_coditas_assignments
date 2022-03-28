@@ -1,3 +1,4 @@
+using _16_March.CustomFilter;
 using _16_March.Models;
 using _16_March.Services;
 using Microsoft.AspNetCore.Builder;
@@ -40,6 +41,12 @@ namespace _16_March
             services.AddScoped<IService<Employee, int>, EmployeeService>();
             services.AddScoped<IService<UserInfo, int>, UserService>();
 
+            //Injecting for LOG table
+            services.AddControllersWithViews(options => {
+                //options.Filters.Add(typeof(LogFilterAttribute));
+                options.Filters.Add(typeof(LogFilterAttribute));
+                options.Filters.Add(typeof(AppExceptionFilterAttribute));
+            });
             services.AddControllersWithViews();
         }
 
