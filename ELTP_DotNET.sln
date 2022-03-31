@@ -47,9 +47,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Restaurant Billing", "Resta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant_Billing_System", "Restaurant_Billing_System\Restaurant_Billing_System.csproj", "{81B12BBF-0BC9-4576-BC15-38FCDE38417D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping_Cart", "Shopping_Cart\Shopping_Cart.csproj", "{36E1ED55-1657-4022-8660-307665FA0565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping_Cart", "Shopping_Cart\Shopping_Cart.csproj", "{36E1ED55-1657-4022-8660-307665FA0565}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice_1", "Practice_1\Practice_1.csproj", "{69C21FCC-2598-49FA-B57F-DA85E914C591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{2550DA0D-30E4-42A2-AEE6-8C1DD4AFF4BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practice_Razor", "practice_Razor\practice_Razor.csproj", "{411BCDD1-636A-4499-9A88-075EF95D4997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{2F32779C-613B-4D3C-A699-E8D71C0E8BD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +151,18 @@ Global
 		{69C21FCC-2598-49FA-B57F-DA85E914C591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69C21FCC-2598-49FA-B57F-DA85E914C591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C21FCC-2598-49FA-B57F-DA85E914C591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2550DA0D-30E4-42A2-AEE6-8C1DD4AFF4BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2550DA0D-30E4-42A2-AEE6-8C1DD4AFF4BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2550DA0D-30E4-42A2-AEE6-8C1DD4AFF4BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2550DA0D-30E4-42A2-AEE6-8C1DD4AFF4BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411BCDD1-636A-4499-9A88-075EF95D4997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411BCDD1-636A-4499-9A88-075EF95D4997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411BCDD1-636A-4499-9A88-075EF95D4997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411BCDD1-636A-4499-9A88-075EF95D4997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F32779C-613B-4D3C-A699-E8D71C0E8BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F32779C-613B-4D3C-A699-E8D71C0E8BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F32779C-613B-4D3C-A699-E8D71C0E8BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F32779C-613B-4D3C-A699-E8D71C0E8BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

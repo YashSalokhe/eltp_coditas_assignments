@@ -160,7 +160,22 @@
       "ProjectGuid": "69c21fcc-2598-49fa-b57f-da85e914c591",
       "DisplayName": "Practice_1",
       "ColorIndex": 14
+    },
+    "2550da0d-30e4-42a2-aee6-8c1dd4aff4ba": {
+      "ProjectGuid": "2550da0d-30e4-42a2-aee6-8c1dd4aff4ba",
+      "DisplayName": "api",
+      "ColorIndex": 15
+    },
+    "411bcdd1-636a-4499-9a88-075ef95d4997": {
+      "ProjectGuid": "411bcdd1-636a-4499-9a88-075ef95d4997",
+      "DisplayName": "practice_Razor",
+      "ColorIndex": 0
+    },
+    "2f32779c-613b-4d3c-a699-e8d71c0e8bd5": {
+      "ProjectGuid": "2f32779c-613b-4d3c-a699-e8d71c0e8bd5",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 2
 }
