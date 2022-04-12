@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using _16_March.Models;
 
 #nullable disable
 
@@ -189,5 +190,9 @@ namespace _16_March.Models
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<_16_March.Models.Category> Category { get; set; }
+
+        public DbSet<_16_March.Models.Product> Product { get; set; }
     }
 }

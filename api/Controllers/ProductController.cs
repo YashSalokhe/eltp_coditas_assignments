@@ -6,11 +6,13 @@ namespace api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
-    {
+    {                                                  
         private readonly IService<Product,int> proServ;
-        public ProductController(IService<Product, int> proServ)
+        private readonly IService<Category, int> catServ;
+        public ProductController(IService<Product, int> proServ, IService<Category, int> catServ)
         {
             this.proServ = proServ;
+            this.catServ = catServ;
         }
 
         [HttpGet]
@@ -32,14 +34,23 @@ namespace api.Controllers
         [HttpPost]
         public IActionResult Post(Product product)
         {
+            int BasePrice =catServ.GetAsync().Result.Where(x => x.CategoryRowId == product.CategoryRowId).Select(x => x.BasePrice).FirstOrDefault();
+
             if (ModelState.IsValid)
             {
-                var res = proServ.CreateAsync(product).Result;
-                return Ok(res);
+                if (BasePrice <= product.price)
+                {
+                    var res = proServ.CreateAsync(product).Result;
+                    return Ok(res);
+                }
+                else
+                {
+                    return BadRequest("Base Price Must Greater Than or Is equal to Product Price");
+
+                }
             }
             else
             {
-                // Data is Invalid
                 return BadRequest(ModelState);
             }
         }
@@ -52,7 +63,7 @@ namespace api.Controllers
             if (record == null) return NotFound($"BAsed of Category Row Id {id} the record is not found");
 
             
-            if (id != product.CategoryRowId)
+            if (id != product.ProductRowId)
                 return BadRequest($"Id for seaarch {id} does not match with Category Row Id in Body {product.CategoryRowId}");
 
             if (ModelState.IsValid)

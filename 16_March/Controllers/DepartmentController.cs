@@ -1,5 +1,6 @@
 ﻿using _16_March.Models;
 using _16_March.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -15,12 +16,17 @@ namespace _16_March.Controllers
         {
             deptService = service;
         }
+
+        //[Authorize(Roles = "Manager,Clerk,Operator")]
+        [Authorize(Policy = "ReadPolicy")]
         public IActionResult Index()
         {
             var res = deptService.GetAsync().Result;
             return View(res);
         }
 
+        //[Authorize(Roles = "Manager,Clerk")]
+        [Authorize(Policy = "ManagerClerkPolicy")]
         public IActionResult Create()
         {
             var dept = new Department();
@@ -72,13 +78,16 @@ namespace _16_March.Controllers
 
             }
         }
-            /// <summary>
-            /// the http get edit request must pass the route paramenter as 
-            /// 'id' (Refer: app.UseEndpoint)
-            /// </summary>
-            /// <param name="id"></param>
-            /// <returns></returns>
-            public IActionResult Edit(int id)
+        /// <summary>
+        /// the http get edit request must pass the route paramenter as 
+        /// 'id' (Refer: app.UseEndpoint)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
+ // [Authorize(Roles = "Manager,Clerk")]
+        [Authorize(Policy = "ManagerClerkPolicy")]
+        public IActionResult Edit(int id)
         {
             var res = deptService.GetAsync(id).Result;
             return View(res);
@@ -103,6 +112,9 @@ namespace _16_March.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        /// 
+         // [Authorize(Roles = "Manager")]
+        [Authorize(Policy = "ManagerPolicy")]
         public IActionResult Delete(int id)
         {
            // var res = deptService.GetAsync(id).Result;

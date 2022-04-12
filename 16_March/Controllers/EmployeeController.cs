@@ -1,5 +1,6 @@
 ﻿using _16_March.Models;
 using _16_March.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 
 namespace _16_March.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IService<Employee, int> empService;

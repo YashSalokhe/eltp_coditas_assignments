@@ -23,10 +23,10 @@ namespace _16_March.Controllers
             deptEmps.Employees = empServ.GetAsync().Result.ToList();
             List<EmpData> employee = new List<EmpData>();
 
-            foreach(var emp in deptEmps.Employees)
-            {
-                employee.Add(new EmpData { DeptNo = }
-            }
+            //foreach(var emp in deptEmps.Employees)
+            //{
+            //    employee.Add(new EmpData { DeptNo = }
+            //}
             if (id == 0)
             {
                 ViewBag.department = new SelectList(deptServ.GetAsync().Result.ToList(), "DeptNo", "DeptName");

@@ -1,9 +1,11 @@
 using _16_March.CustomFilter;
+using _16_March.Data;
 using _16_March.Models;
 using _16_March.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,19 +37,67 @@ namespace _16_March
                 options.UseSqlServer(Configuration.GetConnectionString("AppConnStr"));
             });
 
+
+            //The registration of the _16_MarchContext into the dependency container
+            services.AddDbContext<_16_MarchContext>(options =>
+                   options.UseSqlServer(
+                       Configuration.GetConnectionString("_16_MarchContextConnection")));
+
+            //Register the identity provider classes in dependency container    
+            // userManager<IdentityUser> : user MAnagement(CRUD)
+            // SigninManager<IdentityUser> : User Login Management
+            //services.AddDefaultIdentity<IdentityUser>(options =>
+            //    //Navigate to confirmEmail page when new user is registered
+            //    options.SignIn.RequireConfirmedAccount = false
+            //    )
+
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(session => {
+                session.IdleTimeout = System.TimeSpan.FromMinutes(20);
+            });
+
+            ////Connect to database for security using EF core
+            //    .AddEntityFrameworkStores<_16_MarchContext>()
+            //    .AddDefaultUI();
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<_16_MarchContext>()
+             .AddDefaultUI();
+
+
+
+
+            // Define Policies
+            services.AddAuthorization(options => {
+                options.AddPolicy("ReadPolicy", policy => {
+                    policy.RequireRole("Manager", "Clerk", "Operator");
+                });
+                options.AddPolicy("ManagerClerkPolicy", policy => {
+                    policy.RequireRole("Manager", "Clerk");
+                });
+                options.AddPolicy("ManagerPolicy", policy => {
+                    policy.RequireRole("Manager");
+                });
+
+            });
+
+
+
+
             //Register the custom services those contains buisness logic
             //service interface,class implementing service interface
             services.AddScoped<IService<Department, int>, DepartmentService>();
             services.AddScoped<IService<Employee, int>, EmployeeService>();
             services.AddScoped<IService<UserInfo, int>, UserService>();
 
+            //for cache
+            services.AddMemoryCache();
+
             //Injecting for LOG table
-            services.AddControllersWithViews(options => {
-                //options.Filters.Add(typeof(LogFilterAttribute));
-                options.Filters.Add(typeof(LogFilterAttribute));
-                options.Filters.Add(typeof(AppExceptionFilterAttribute));
-            });
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
+           // services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,9 +115,11 @@ namespace _16_March
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
+            //middleware for user authentication
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -78,6 +130,9 @@ namespace _16_March
                     // Route URL expression
                     //          HomeController      The Index action method id is optional
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //map request to razor view for identity pages
+                endpoints.MapRazorPages();
             });
         }
     }
