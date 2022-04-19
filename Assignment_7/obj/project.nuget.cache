@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uPw8luTMKlNkR7nHHyj6zkv7Vh9gIlGZZIN64X1AFE2YcV2MUIbXeY5fAR7MnRAmMpMr26iZJlcyIQb2C2NxCw==",
+  "dgSpecHash": "p6VIb5Uyp9+UqHecpwLELFJTyWMrC9juONBzTTZcIZFhfL3jn0nVguEB25w8QQmOnJVJSF7NlGYqAWrB+HMqRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Coditas\\source\\repos\\ELTP_DotNET\\Assignment_7\\Assignment_7.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Coditas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+    "C:\\Users\\Coditas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
   ],
   "logs": []
 }

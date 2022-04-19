@@ -75,7 +75,7 @@
 <hr/>
 <div class="container">
    @* @System.Text.Json.JsonSerializer.Serialize(employees)*@
-   <table>
+   <table class="table table-bordered table-striped">
        <thead>
            <tr>
                <th>EmpNo</th>
@@ -88,12 +88,13 @@
        <tbody>
                 @foreach (var emp in employees)
                 {
-                     <tr >
-                         <td onclick="edit(emp.EmpNo)">@emp.EmpNo</td>
+                     <tr @onclick="() => edit(emp.EmpNo)" >
+                         <td>@emp.EmpNo</td>
                          <td>@emp.EmpName</td>
                          <td>@emp.DeptName</td>
                          <td>@emp.Designation</td>
                          <td>@emp.Salary</td>
+                           
                      </tr>
                 }
             </tbody>
@@ -111,6 +112,7 @@
     EmployeeDB employees;
     List<string> departments;
     List<string> designations;
+  
 
     /// <summary>
     /// Method that will be executed when the COmponent list abut to Load
@@ -120,8 +122,13 @@
     {
         employee = new Employee();
         employees = new EmployeeDB();
+
         departments = new List<string>() { "IT", "HRD", "System", "Training" };
         designations = new List<string>() { "Manager", "Lead", "Engineer", "Operator", "Clerk" };
+
+      
+
+
         return base.OnInitializedAsync();
     }
 
@@ -130,13 +137,13 @@
         employee = new Employee();
     }
     void save()
-    {
+    {    
         employees.Add(employee);        
     }
-
-    Employee edit(int empNo)
+                                                                                                        
+    void edit(int empNo)
     {
-        var res = employees.Find(x=>x.EmpNo == empNo);
-        return res;
+       employee = employees.Find(x=>x.EmpNo == empNo);
+      
     }
 }

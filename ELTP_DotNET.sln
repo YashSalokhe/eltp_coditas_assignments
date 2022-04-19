@@ -59,7 +59,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebAppli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{9B83E8C8-6661-4286-B077-337E9405F76F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Wasm", "Blazor_Wasm\Blazor_Wasm.csproj", "{F4C72695-FAB2-48DF-A988-8EFBA774EE1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Wasm", "Blazor_Wasm\Blazor_Wasm.csproj", "{F4C72695-FAB2-48DF-A988-8EFBA774EE1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentMarks", "StudentMarks\StudentMarks.csproj", "{6BF806C7-ED2C-4F0C-B3F0-435C58CB1396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{F4C72695-FAB2-48DF-A988-8EFBA774EE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C72695-FAB2-48DF-A988-8EFBA774EE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C72695-FAB2-48DF-A988-8EFBA774EE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF806C7-ED2C-4F0C-B3F0-435C58CB1396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF806C7-ED2C-4F0C-B3F0-435C58CB1396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF806C7-ED2C-4F0C-B3F0-435C58CB1396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF806C7-ED2C-4F0C-B3F0-435C58CB1396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

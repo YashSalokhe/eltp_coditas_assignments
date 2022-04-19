@@ -30,12 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVDUlVELnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Coditas/source/repos/ELTP_DotNET/Blazor_Wasm/Pages/EmployeeTableComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVUYWJsZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coditas/source/repos/ELTP_DotNET/Blazor_Wasm/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coditas/source/repos/ELTP_DotNET/Blazor_Wasm/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coditas/source/repos/ELTP_DotNET/Blazor_Wasm/Pages/MyComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coditas/source/repos/ELTP_DotNET/Blazor_Wasm/Shared/SurveyPrompt.razor]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2TXDEegCMqD1E3sHMwXoo+PnKPyIHwqO9oDOroYTkzGXaDFzaWdG8442SsovxIpVfN1FNgGPHRAS0BNZkuk+Bw==",
+  "dgSpecHash": "14D83AKSFXcFOIE4F9agwrjXdsB8sNkjF7mAyxX54oOV5vMQzjPXGBAfidB1Vp0tajX2YU5tnOYTG/G18liVxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Coditas\\source\\repos\\ELTP_DotNET\\Shopping_Cart\\Shopping_Cart.csproj",
   "expectedPackageFiles": [
@@ -128,7 +128,7 @@
     "C:\\Users\\Coditas\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Coditas\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Coditas\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Coditas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+    "C:\\Users\\Coditas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
   ],
   "logs": []
 }

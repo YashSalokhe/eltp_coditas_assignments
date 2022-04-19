@@ -1,0 +1,147 @@
+﻿@page "/mypage"
+@using Blazor_Wasm.Models
+@using System.Reflection
+
+<div class="container">
+    <EditForm Model="employee">
+<table class="table table-bordered table-striped">
+    <tbody>
+        <tr>
+            <td>
+                EmpNo
+            </td>
+            <td>
+                <InputNumber  @bind-Value="employee.EmpNo" class="form-control"></InputNumber>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                EmpName
+            </td>
+            <td>
+                <InputText @bind-Value="employee.EmpName" class="form-control"></InputText>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                DeptName
+            </td>
+            <td>
+                <InputSelect @bind-Value="employee.DeptName" class="form-control">
+                    <!--Generating UI based on Data-->
+                   @foreach (var dname in departments)
+                   {
+                       <option value="@dname">@dname</option>
+                   }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Designation
+            </td>
+            <td>
+                <InputSelect @bind-Value="employee.Designation" class="form-control">
+                     <!--Generating UI based on Data-->
+                   @foreach (var desig in designations)
+                   {
+                       <option value="@desig">@desig</option>
+                   }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Salary
+            </td>
+            <td>
+                 <InputNumber  @bind-Value="employee.Salary" class="form-control"></InputNumber>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                <input type="button" value="Clear" class="btn btn-warning"
+                 @onclick="clear"/>
+            </td>
+            <td>
+                <input type="button" value="Save" class="btn btn-success"
+                 @onclick="save"/>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<hr />
+</EditForm>
+    <table class="table table-bordered table-striped">
+
+        <tbody>
+
+            <tr>
+                @foreach (var head in headers)
+               {
+                  <th>@head</th>
+               }
+            </tr>
+
+            @foreach (var emp in employees)
+           {
+               <tr>
+
+                   @foreach (var head in headers)
+                  {
+                      <td>@emp.GetType().GetProperty(head).GetValue(emp,null)   </td>
+                  }
+
+               </tr>
+           }
+
+        </tbody>
+
+    </table>
+    </div>
+@code {
+    Employee employee;
+    EmployeeDB employees;
+    List<string> departments;
+    List<string> designations;
+    List<string> headers = new List<string>();
+
+    /// <summary>
+    /// Method that will be executed when the COmponent list abut to Load
+    /// </summary>
+    /// <returns></returns>
+    protected override Task OnInitializedAsync()
+    {
+        employee = new Employee();
+        employees = new EmployeeDB();
+        departments = new List<string>() { "IT", "HRD", "System", "Training" };
+        designations = new List<string>() { "Manager", "Lead", "Engineer", "Operator", "Clerk" };
+
+        var ep = employee.GetType().GetProperties(System.Reflection.BindingFlags.DeclaredOnly | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+          foreach (var data in ep)
+
+        {
+
+            headers.Add(data.Name);
+
+        }
+        return base.OnInitializedAsync();
+    }
+
+    void clear()
+    {
+        employee = new Employee();
+    }
+    void save()
+    {    
+        employees.Add(employee);        
+    }
+                                                                                                        
+    void edit(int empNo)
+    {
+       employee = employees.Find(x=>x.EmpNo == empNo);
+      
+    }
+}
